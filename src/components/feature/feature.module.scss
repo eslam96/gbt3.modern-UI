@@ -1,0 +1,99 @@
+.gpt3__features-container {
+  &__feature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 1rem;
+
+    &-title {
+      flex: 1;
+      max-width: 180px;
+      margin-right: 2rem;
+      h1 {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.04em;
+        color: #fff;
+      }
+      .empty {
+        width: 38px;
+        height: 3px;
+        background: var(--gradient-bar);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 0.25rem;
+      }
+    }
+    &-text {
+      flex: 2;
+      max-width: 390px;
+      display: flex;
+      p {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--color-text);
+      }
+    }
+
+    // whatGPT3 custom style class for top feature
+    &.WhatGPT3-topFeature {
+      margin: 0;
+      .gpt3__features-container__feature-text {
+        max-width: 700px;
+      }
+    }
+
+    // whatGPT3 custom style class for container features
+    &.WhatGPT3-containerFeature {
+      flex: 1;
+      margin: 1rem;
+      min-width: 210px;
+      display: unset;
+      flex-direction: column !important;
+
+      .gpt3__features-container__feature-text {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .WhatGPT3-topFeature {
+    flex-direction: column;
+    .gpt3__features-container__feature-text {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gpt3__features-container__feature {
+    margin: 1rem 0;
+    &-title {
+      h1 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &-text {
+      p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .WhatGPT3-topFeature {
+    margin: 1rem 0;
+    min-width: 100%;
+  }
+}
