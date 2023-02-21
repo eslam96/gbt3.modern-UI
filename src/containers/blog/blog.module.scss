@@ -1,0 +1,135 @@
+.gpt3__blog {
+  display: flex;
+  flex-direction: column;
+  &-heading {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5rem;
+
+    h1 {
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      letter-spacing: -0.04em;
+    }
+  }
+  &-container {
+    &_gridView {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2em 2em;
+
+      .article-container-1 {
+        grid-area: 1 / 1 / 3 / 2;
+      }
+      .article-container-2 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .article-container-3 {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      .article-container-4 {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      .article-container-5 {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .gpt3__blog {
+    &-container {
+      &_gridView {
+        .article-container-2 {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+        .article-container-3 {
+          grid-area: 1 / 3 / 2 / 4;
+        }
+        .article-container-1 {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .article-container-4 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .article-container-5 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .gpt3__blog {
+    &-container {
+      &_gridView {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        .article-container-2 {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+        .article-container-1 {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .article-container-3 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .article-container-4 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        .article-container-5 {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gpt3__blog {
+    &-heading {
+      h1 {
+        font-size: 46px;
+        line-height: 52px;
+      }
+    }
+    &-container {
+      &_gridView {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+
+        .article-container-1 {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .article-container-2 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .article-container-3 {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+        .article-container-4 {
+          grid-area: 4 / 1 / 5 / 2;
+        }
+        .article-container-5 {
+          grid-area: 5 / 1 / 6 / 2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gpt3__blog {
+    &-heading {
+      h1 {
+        font-size: 34x;
+        line-height: 42px;
+      }
+    }
+  }
+}
